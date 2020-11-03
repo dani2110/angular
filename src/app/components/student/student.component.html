@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="jumbotron">
+      <div class="row">
+          <div class="col-md-5">
+              <img [src]="student.img" alt="">
+              <!--img [src]="{{ student.img }} alt=""-->
+              <a [routerLink]="[ '/students']" class="btn btn-outline-primary btn-block">
+                  Regresar
+              </a>
+          </div>
+          <div class="col-md-7">
+              <h5>{{ student.nombre }}</h5>
+              <div>
+                <h6>{{ student.titulo }}</h6>
+                <!-- <h6 *ngIf="student.habilidad=='Desarrollo front end'">El nivel de estudio es Ingeniero</h6> -->
+              </div>
+              <div><label>
+                {{ student.habilidad }}
+              </label>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <div class="card-columns">
+
+    <div class="card" *ngFor="let student of students; let i=index">
+      <!--img class="card-img-top" src="{{student.img}}" alt="Card image cap">-->
+      <img class="card-img-top" [src]="student.img" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">{{student.nombre}}</h4>
+        <p class="card-text">{{student.titulo}}</p>
+        <p class="card-text">
+          <small class="text-muted">
+          {{student.habilidad}}
+          </small>
+        </p>
+        <!--  <a [routerLink]="['/student',i]" class="btn btn-outline-primary">Ver más información</a> -->
+        <button type="button" class="btn btn-outline-primary" (click)="getStudent(i)">Ver detalle</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
